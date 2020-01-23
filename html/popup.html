@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/bulma.min.css" />
+    <style>
+      body {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <!-- header -->
+        <h1 id="title" class="title">Random Picker</h1>
+        <!-- add area -->
+        <div class="columns is-mobile is-vcentered">
+          <div class="column">
+            <form name="addForm" class="field has-addons">
+              <div class="control">
+                <input
+                  name="addInput"
+                  class="input"
+                  type="text"
+                  placeholder="New Text"
+                />
+              </div>
+              <div class="control">
+                <button type="submit" class="button is-info" tabindex="-1">
+                  ADD
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- pick area -->
+        <div class="columns is-mobile is-vcentered">
+          <div class="column is-7">
+            <form name="pickForm" class="field has-addons">
+              <div class="control">
+                <input
+                  name="pickInput"
+                  class="input"
+                  type="number"
+                  placeholder="Count of Pick"
+                  value="1"
+                />
+              </div>
+              <div class="control">
+                <button type="submit" class="button is-success" tabindex="-1">
+                  Pick
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="column">
+            <button id="clearBtn" class="button is-danger" tabindex="-1">
+              Clear
+            </button>
+          </div>
+        </div>
+        <div class="columns is-mobile is-multiline">
+          <!-- pick list -->
+          <div class="column">
+            <div
+              id="pickList"
+              class="column field is-grouped is-grouped-multiline"
+            ></div>
+          </div>
+          <!-- picked list -->
+          <div class="column">
+            <p class="subtitle is-6">抽選結果</p>
+            <div id="pickedList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>
